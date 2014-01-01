@@ -1,3 +1,12 @@
 <h1>Cars List</h1>
-
+<ul>
+  <% @cars.each do |car| %>
+  <h3> Car Details </h3>
+  <li><%= car.color %></li>
+  <li><%= car.year %></li>
+  <li><%= car.mileage %></li>
+  <li><%= car.description %></li>
+  <br>
+  <% end %>
+</ul>
 <%= link_to 'Create New Car', new_car_path %>
